@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>BohdanKhymych — Unity Tools</title>
+<meta name="description" content="Unity editor tools and toolkits by Bohdan Khymych: Tracing Toolkit and Store Shots Studio.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #f6f5fb; --surface: #ffffff; --text: #1d1b2e; --muted: #5d5a73;
+    --accent: #5b3fd6; --accent-text: #ffffff; --border: #e3e0ef;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root { --bg: #14121f; --surface: #1e1b2e; --text: #f1eff9; --muted: #a9a5c2;
+      --accent: #8b74ff; --accent-text: #14121f; --border: #2e2a44; }
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--text);
+    font: 16px/1.6 Inter, system-ui, sans-serif; }
+  a { color: var(--accent); }
+  .wrap { max-width: 1040px; margin: 0 auto; padding: 0 16px; }
+  header { padding: 72px 0 40px; }
+  h1 { font-size: clamp(32px, 6vw, 52px); line-height: 1.1; margin: 0 0 12px; font-weight: 800; }
+  .lead { font-size: 19px; color: var(--muted); max-width: 640px; margin: 0; }
+  nav { display: flex; gap: 20px; margin-top: 24px; flex-wrap: wrap; }
+  nav a { font-weight: 600; text-decoration: none; }
+  h2 { font-size: 26px; margin: 56px 0 20px; }
+  .products { display: grid; gap: 24px; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); }
+  .card { background: var(--surface); border: 1px solid var(--border); border-radius: 16px; overflow: hidden;
+    display: flex; flex-direction: column; }
+  .card img.cover { width: 100%; aspect-ratio: 3 / 2; object-fit: cover; display: block; }
+  .card .body { padding: 20px; display: flex; flex-direction: column; gap: 10px; flex: 1; }
+  .card h3 { margin: 0; font-size: 20px; display: flex; align-items: center; gap: 10px; }
+  .card h3 img { width: 32px; height: 32px; border-radius: 8px; }
+  .card p { margin: 0; color: var(--muted); }
+  .card ul { margin: 0; padding-left: 20px; color: var(--muted); }
+  .tag { font-size: 13px; font-weight: 600; color: var(--muted); }
+  .btn { display: inline-block; margin-top: auto; align-self: flex-start; background: var(--accent);
+    color: var(--accent-text); padding: 10px 18px; border-radius: 10px; font-weight: 600; text-decoration: none; }
+  .btn.ghost { background: transparent; color: var(--muted); border: 1px solid var(--border); }
+  .shots { display: grid; gap: 16px; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); }
+  .shots img { width: 100%; border-radius: 12px; border: 1px solid var(--border); display: block; }
+  .about, .contact { background: var(--surface); border: 1px solid var(--border); border-radius: 16px; padding: 24px; }
+  .about p, .contact p { margin: 0 0 10px; }
+  .about p:last-child, .contact p:last-child { margin: 0; }
+  footer { color: var(--muted); font-size: 14px; padding: 48px 0; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <h1>Bohdan Khymych</h1>
+    <p class="lead">Unity developer making editor tools and toolkits that save game developers time: tested, documented and ready for Unity 6.</p>
+    <nav><a href="#products">Products</a><a href="#about">About</a><a href="#contact">Contact</a></nav>
+  </header>
+
+  <section id="products">
+    <h2>Products</h2>
+    <div class="products">
+      <article class="card">
+        <img class="cover" src="img/tt-cover.jpg" alt="Tracing Toolkit cover: letter tracing on school lines">
+        <div class="body">
+          <h3><img src="img/tt-icon.png" alt="">Tracing Toolkit</h3>
+          <span class="tag">Letter tracing for kids · Unity Asset Store</span>
+          <p>Letter, digit and shape tracing for children's educational apps.</p>
+          <ul>
+            <li>220 letters in 16 languages with correct stroke order</li>
+            <li>Stroke numbers, arrows, hints and a ready alphabet player</li>
+            <li>Events for every stroke, mistake and finished letter</li>
+          </ul>
+          <a class="btn" href="https://u3d.as/4gev">View on the Asset Store</a>
+        </div>
+      </article>
+      <article class="card">
+        <img class="cover" src="img/sss-cover.jpg" alt="Store Shots Studio cover: localized store screenshots">
+        <div class="body">
+          <h3><img src="img/sss-icon.png" alt="">Store Shots Studio</h3>
+          <span class="tag">Editor tool · in review on the Unity Asset Store</span>
+          <p>Store-ready screenshots straight from your game: every shot, in every language, for every store.</p>
+          <ul>
+            <li>Captures Edit Mode or Play Mode, overlay UI included</li>
+            <li>CSV tables or Unity Localization; 25 store presets</li>
+            <li>Templates with localized headlines and store-rule checks</li>
+          </ul>
+          <span class="btn ghost">Coming soon</span>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section>
+    <h2>Screenshots</h2>
+    <div class="shots">
+      <img src="img/tt-shot.jpg" alt="Tracing Toolkit demo in Ukrainian">
+      <img src="img/sss-shot.jpg" alt="Store Shots Studio: one project rendered for several stores and languages">
+    </div>
+  </section>
+
+  <section id="about">
+    <h2>About</h2>
+    <div class="about">
+      <p>I build mobile games in Unity and turn the tools I need along the way into products for other developers.</p>
+      <p>Every package ships with full C# source, documentation, a playable demo and automated tests, and is checked with the Asset Store validator before release.</p>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>Contact</h2>
+    <div class="contact">
+      <p>Questions, bug reports or feature requests: <a href="mailto:bogdanzno2020@gmail.com">bogdanzno2020@gmail.com</a></p>
+      <p>I usually reply within two working days.</p>
+    </div>
+  </section>
+
+  <footer>© 2026 Bohdan Khymych</footer>
+</div>
+</body>
+</html>
